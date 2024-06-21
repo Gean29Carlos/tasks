@@ -41,7 +41,24 @@ export default props => {
 
 
 
-const stykes = StyleSheet.create({
+function get_check_view(done_at){
+    if(done_at != null){
+   return (
+    <View style={styles.done}>
+    <Icon name="check" size={20}></Icon>
+    </View>
+    )
+
+    } else {
+        return (
+            <View style={styles.pending}>
+
+            </View>
+        )
+    }
+}
+
+const styles = StyleSheet.create({
     container:{
         flexDirection:'row',
         borderColor:'#AAA',
